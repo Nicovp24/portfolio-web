@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2a1f"/>
+      <stop offset="1" stop-color="#0e1712"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe3c4"/>
+      <stop offset="1" stop-color="#9fc28d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+
+  <!-- battle view (abstract) -->
+  <g transform="translate(56,64)">
+    <rect width="660" height="672" rx="18" fill="#203126" stroke="#2f4636"/>
+    <rect x="20" y="20" width="620" height="400" rx="12" fill="url(#field)"/>
+    <ellipse cx="470" cy="170" rx="110" ry="26" fill="#86ad74"/>
+    <ellipse cx="190" cy="350" rx="130" ry="30" fill="#7ea36c"/>
+    <!-- opponent creature (abstract) -->
+    <g transform="translate(470,120)">
+      <path d="M-50 40 q0 -70 50 -70 q50 0 50 70z" fill="#6f7fb8"/>
+      <circle cx="-16" cy="0" r="7" fill="#fff"/><circle cx="-14" cy="1" r="3.5" fill="#1b2a1f"/>
+      <circle cx="16" cy="0" r="7" fill="#fff"/><circle cx="18" cy="1" r="3.5" fill="#1b2a1f"/>
+    </g>
+    <!-- own creature (abstract) -->
+    <g transform="translate(190,290)">
+      <path d="M-62 56 q-6 -96 62 -96 q68 0 62 96z" fill="#d9864f"/>
+      <path d="M-30 -30 l-18 -34 l30 18z M30 -30 l18 -34 l-30 18z" fill="#c4713c"/>
+    </g>
+    <!-- hp bars -->
+    <g transform="translate(40,40)" font-size="13">
+      <rect width="230" height="58" rx="10" fill="#ffffff" opacity=".92"/>
+      <text x="14" y="22" fill="#1b2a1f" font-weight="700">Opponent</text>
+      <rect x="14" y="34" width="200" height="10" rx="5" fill="#e3e8e0"/>
+      <rect x="14" y="34" width="84" height="10" rx="5" fill="#f2b84b"/>
+    </g>
+    <g transform="translate(390,330)" font-size="13">
+      <rect width="230" height="58" rx="10" fill="#ffffff" opacity=".92"/>
+      <text x="14" y="22" fill="#1b2a1f" font-weight="700">You</text>
+      <rect x="14" y="34" width="200" height="10" rx="5" fill="#e3e8e0"/>
+      <rect x="14" y="34" width="162" height="10" rx="5" fill="#5cc46e"/>
+    </g>
+    <!-- move buttons -->
+    <g transform="translate(20,444)" font-size="15" font-weight="600">
+      <rect width="302" height="58" rx="10" fill="#2f4636" stroke="#7fe08f" stroke-width="2"/>
+      <text x="18" y="35" fill="#e8f5e9">Move A  <tspan fill="#7fe08f" font-size="12">★ recommended</tspan></text>
+      <rect x="318" width="302" height="58" rx="10" fill="#2a3d30"/>
+      <text x="336" y="35" fill="#bcd0bf">Move B</text>
+      <rect y="72" width="302" height="58" rx="10" fill="#2a3d30"/>
+      <text x="18" y="107" fill="#bcd0bf">Move C</text>
+      <rect x="318" y="72" width="302" height="58" rx="10" fill="#2a3d30" opacity=".5"/>
+      <text x="336" y="107" fill="#7e8f81">Move D  <tspan font-size="12">· immune, discarded</tspan></text>
+    </g>
+    <text x="20" y="636" fill="#7e8f81" font-size="13">state read from the game WebSocket · never touches the DOM</text>
+  </g>
+
+  <!-- overlay -->
+  <g transform="translate(748,64)">
+    <rect width="476" height="672" rx="18" fill="#0b120e" stroke="#2f4636"/>
+    <text x="28" y="50" fill="#7fe08f" font-size="22" font-weight="800" letter-spacing="2">MANTIS</text>
+    <text x="448" y="50" fill="#7e8f81" font-size="13" text-anchor="end">turn 14 · 212 ms</text>
+
+    <g transform="translate(28,82)">
+      <rect width="420" height="132" rx="14" fill="#14211a" stroke="#2f4636"/>
+      <text x="20" y="34" fill="#9fb8a4" font-size="13">RECOMMENDED</text>
+      <text x="20" y="68" fill="#ffffff" font-size="24" font-weight="700">Move A</text>
+      <text x="400" y="68" fill="#7fe08f" font-size="24" font-weight="800" text-anchor="end">78%</text>
+      <text x="20" y="98" fill="#9fb8a4" font-size="13">OHKO on 15/16 rolls · you outspeed</text>
+      <text x="20" y="118" fill="#9fb8a4" font-size="13">2nd option: switch → slot 3 (61%)</text>
+    </g>
+
+    <g transform="translate(28,240)">
+      <text fill="#9fb8a4" font-size="13">WIN RATE · Monte Carlo (100 sims)</text>
+      <rect y="16" width="420" height="16" rx="8" fill="#1d2b22"/>
+      <rect y="16" width="269" height="16" rx="8" fill="#7fe08f"/>
+      <text x="420" y="58" fill="#ffffff" font-size="15" font-weight="700" text-anchor="end">64%</text>
+    </g>
+
+    <g transform="translate(28,326)">
+      <text fill="#9fb8a4" font-size="13">OPPONENT SET · Bayesian prediction</text>
+      <g font-size="14" fill="#dfeee2">
+        <text y="38">Set 1 · choice item</text>
+        <rect x="220" y="27" width="200" height="12" rx="6" fill="#1d2b22"/><rect x="220" y="27" width="124" height="12" rx="6" fill="#5fb6d4"/>
+        <text y="72">Set 2 · setup</text>
+        <rect x="220" y="61" width="200" height="12" rx="6" fill="#1d2b22"/><rect x="220" y="61" width="52" height="12" rx="6" fill="#5fb6d4" opacity=".75"/>
+        <text y="106">Set 3 · defensive</text>
+        <rect x="220" y="95" width="200" height="12" rx="6" fill="#1d2b22"/><rect x="220" y="95" width="24" height="12" rx="6" fill="#5fb6d4" opacity=".5"/>
+      </g>
+    </g>
+
+    <g transform="translate(28,470)">
+      <rect width="420" height="1" fill="#2f4636"/>
+      <g font-size="13" fill="#9fb8a4" transform="translate(0,34)">
+        <text>Damage calc</text><text x="420" fill="#ffffff" text-anchor="end">Gen 9 · 16 rolls · weather · terrain</text>
+        <text y="32">Speed check</text><text x="420" y="32" fill="#ffffff" text-anchor="end">faster</text>
+        <text y="64">Anti-Protect</text><text x="420" y="64" fill="#ffffff" text-anchor="end">on</text>
+      </g>
+    </g>
+    <g transform="translate(28,600)">
+      <rect width="420" height="44" rx="12" fill="#14211a"/>
+      <text x="210" y="28" fill="#7fe08f" font-size="13" text-anchor="middle">The player always decides. MANTIS only recommends.</text>
+    </g>
+  </g>
+</svg>

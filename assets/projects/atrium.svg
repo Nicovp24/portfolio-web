@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a24"/>
+      <stop offset="1" stop-color="#0b131b"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#dots)"/>
+
+  <!-- sidebar -->
+  <rect x="0" y="0" width="200" height="800" fill="#0d1620"/>
+  <rect x="199" y="0" width="1" height="800" fill="#1e2b38"/>
+  <g transform="translate(28,36)">
+    <rect width="34" height="34" rx="9" fill="#4db6ac"/>
+    <path d="M10 24 L17 9 L24 24 M12.5 19 H21.5" stroke="#0d1620" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="46" y="23" fill="#e8f1f0" font-size="18" font-weight="700">Atrium</text>
+  </g>
+  <g font-size="14" fill="#8ea3b3">
+    <rect x="16" y="110" width="168" height="38" rx="9" fill="#16303a"/>
+    <text x="34" y="134" fill="#7fe0d4" font-weight="600">QA runs</text>
+    <text x="34" y="182">Workers</text>
+    <text x="34" y="222">Dispos API</text>
+    <text x="34" y="262">Incidents</text>
+    <text x="34" y="302">Queue reports</text>
+    <text x="34" y="342">Docs</text>
+  </g>
+  <g transform="translate(16,700)">
+    <rect width="168" height="64" rx="10" fill="#132029" stroke="#1e2b38"/>
+    <circle cx="22" cy="32" r="5" fill="#4db6ac" filter="url(#glow)"/>
+    <text x="38" y="28" fill="#e8f1f0" font-size="13" font-weight="600">Auto-QA mode</text>
+    <text x="38" y="46" fill="#7d93a3" font-size="12">running on worker2</text>
+  </g>
+
+  <!-- header -->
+  <text x="240" y="64" fill="#e8f1f0" font-size="26" font-weight="700">Automated QA run</text>
+  <text x="240" y="92" fill="#7d93a3" font-size="14">ticket ready_for_QA  ·  branch feature/new-purchase-flow  ·  started 11:42:08</text>
+  <g transform="translate(1080,44)">
+    <rect width="160" height="44" rx="22" fill="#123a35" stroke="#2c7f75"/>
+    <circle cx="26" cy="22" r="7" fill="#4db6ac" filter="url(#glow)"/>
+    <text x="44" y="28" fill="#9ff0e5" font-size="16" font-weight="700" letter-spacing="1">PASSED</text>
+  </g>
+
+  <!-- pipeline -->
+  <g transform="translate(240,130)">
+    <rect width="1000" height="200" rx="16" fill="#111d28" stroke="#1e2b38"/>
+    <g font-size="13" text-anchor="middle">
+      <g transform="translate(90,92)">
+        <circle r="34" fill="#16303a" stroke="#4db6ac" stroke-width="2"/>
+        <path d="M-11 -12 h22 v24 h-22z M-6 -5 h12 M-6 1 h12 M-6 7 h7" stroke="#7fe0d4" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Mantis ticket</text>
+        <text y="80" fill="#7d93a3" font-size="12">parse QA note</text>
+      </g>
+      <g transform="translate(254,92)">
+        <circle r="34" fill="#16303a" stroke="#4db6ac" stroke-width="2"/>
+        <rect x="-10" y="-3" width="20" height="16" rx="3" fill="none" stroke="#7fe0d4" stroke-width="2"/>
+        <path d="M-6 -3 v-5 a6 6 0 0 1 12 0 v5" stroke="#7fe0d4" stroke-width="2" fill="none"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Lock worker</text>
+        <text y="80" fill="#7d93a3" font-size="12">mutual exclusion</text>
+      </g>
+      <g transform="translate(418,92)">
+        <circle r="34" fill="#16303a" stroke="#4db6ac" stroke-width="2"/>
+        <path d="M-12 -6 l7 6 l-7 6 M0 8 h12" stroke="#7fe0d4" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Deploy branch</text>
+        <text y="80" fill="#7d93a3" font-size="12">SSH · git</text>
+      </g>
+      <g transform="translate(582,92)">
+        <circle r="34" fill="#16303a" stroke="#4db6ac" stroke-width="2"/>
+        <path d="M-7 -11 l17 11 l-17 11z" fill="#7fe0d4"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Run bot</text>
+        <text y="80" fill="#7d93a3" font-size="12">live video · SSE</text>
+      </g>
+      <g transform="translate(746,92)">
+        <circle r="34" fill="#4db6ac" filter="url(#glow)"/>
+        <path d="M-12 0 l8 8 l16 -16" stroke="#0d1620" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Verdict</text>
+        <text y="80" fill="#7d93a3" font-size="12">from result JSON</text>
+      </g>
+      <g transform="translate(910,92)">
+        <circle r="34" fill="#16303a" stroke="#4db6ac" stroke-width="2"/>
+        <path d="M-12 8 l10 -10 l6 6 l10 -12" stroke="#7fe0d4" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="62" fill="#e8f1f0" font-weight="600">Report</text>
+        <text y="80" fill="#7d93a3" font-size="12">Mantis · GitHub · Discord</text>
+      </g>
+    </g>
+    <g stroke="#2c7f75" stroke-width="2" stroke-dasharray="5 6">
+      <line x1="128" y1="92" x2="216" y2="92"/>
+      <line x1="292" y1="92" x2="380" y2="92"/>
+      <line x1="456" y1="92" x2="544" y2="92"/>
+      <line x1="620" y1="92" x2="708" y2="92"/>
+      <line x1="784" y1="92" x2="872" y2="92"/>
+    </g>
+  </g>
+
+  <!-- log -->
+  <g transform="translate(240,356)">
+    <rect width="600" height="408" rx="16" fill="#0a1118" stroke="#1e2b38"/>
+    <circle cx="24" cy="24" r="5" fill="#ff7b72" opacity=".8"/>
+    <circle cx="42" cy="24" r="5" fill="#f2cc60" opacity=".8"/>
+    <circle cx="60" cy="24" r="5" fill="#7ee787" opacity=".8"/>
+    <text x="84" y="29" fill="#7d93a3" font-size="13">langgraph · qa_pipeline</text>
+    <g font-family="'JetBrains Mono', Consolas, monospace" font-size="14">
+      <text x="24" y="76" fill="#7d93a3">11:42:08 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">read_ticket</tspan>  note parsed: branch, booking, env</text>
+      <text x="24" y="106" fill="#7d93a3">11:42:09 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">reserve_worker</tspan>  worker2 locked</text>
+      <text x="24" y="136" fill="#7d93a3">11:42:11 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">deploy</tspan>  ssh · checkout · pull</text>
+      <text x="24" y="166" fill="#7d93a3">11:42:15 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">execute</tspan>  streaming progress (SSE)</text>
+      <text x="24" y="196" fill="#7d93a3">11:45:52 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">evaluate</tspan>  result.json → status=OK</text>
+      <text x="24" y="226" fill="#7ee787">11:45:52 ✓ verdict PASSED (deterministic)</text>
+      <text x="24" y="256" fill="#7d93a3">11:45:53 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">report</tspan>  note + status → Mantis</text>
+      <text x="24" y="286" fill="#7d93a3">11:45:53 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">report</tspan>  check "QA Atrium" → GitHub</text>
+      <text x="24" y="316" fill="#7d93a3">11:45:54 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">notify</tspan>  #qa-live → Discord</text>
+      <text x="24" y="346" fill="#7d93a3">11:45:54 <tspan fill="#7fe0d4">node</tspan> <tspan fill="#e8f1f0">release_worker</tspan>  worker2 free</text>
+      <rect x="24" y="364" width="10" height="18" fill="#4db6ac" opacity=".8"/>
+    </g>
+  </g>
+
+  <!-- workers -->
+  <g transform="translate(864,356)">
+    <rect width="376" height="408" rx="16" fill="#111d28" stroke="#1e2b38"/>
+    <text x="24" y="40" fill="#e8f1f0" font-size="16" font-weight="700">Workers</text>
+    <text x="352" y="40" fill="#7d93a3" font-size="13" text-anchor="end">live</text>
+    <g font-size="13">
+      <g transform="translate(24,64)">
+        <rect width="156" height="148" rx="12" fill="#0a1118" stroke="#1e2b38"/>
+        <rect x="10" y="10" width="136" height="86" rx="6" fill="#16222d"/>
+        <path d="M22 80 l28 -26 l20 16 l26 -30 l36 40" stroke="#2c4a57" stroke-width="3" fill="none"/>
+        <text x="12" y="120" fill="#e8f1f0" font-weight="600">worker1</text>
+        <text x="12" y="138" fill="#7d93a3">idle</text>
+      </g>
+      <g transform="translate(196,64)">
+        <rect width="156" height="148" rx="12" fill="#0a1118" stroke="#4db6ac"/>
+        <rect x="10" y="10" width="136" height="86" rx="6" fill="#e9efe9"/>
+        <rect x="20" y="22" width="70" height="8" rx="3" fill="#b8c4c0"/>
+        <rect x="20" y="38" width="116" height="6" rx="3" fill="#d2dad7"/>
+        <rect x="20" y="50" width="96" height="6" rx="3" fill="#d2dad7"/>
+        <rect x="20" y="68" width="50" height="16" rx="4" fill="#4db6ac"/>
+        <text x="12" y="120" fill="#e8f1f0" font-weight="600">worker2</text>
+        <text x="12" y="138" fill="#7fe0d4">● running QA</text>
+      </g>
+      <g transform="translate(24,228)">
+        <rect width="156" height="148" rx="12" fill="#0a1118" stroke="#1e2b38"/>
+        <rect x="10" y="10" width="136" height="86" rx="6" fill="#16222d"/>
+        <path d="M22 80 l28 -26 l20 16 l26 -30 l36 40" stroke="#2c4a57" stroke-width="3" fill="none"/>
+        <text x="12" y="120" fill="#e8f1f0" font-weight="600">worker3</text>
+        <text x="12" y="138" fill="#7d93a3">idle</text>
+      </g>
+      <g transform="translate(196,228)">
+        <rect width="156" height="148" rx="12" fill="#0a1118" stroke="#1e2b38"/>
+        <rect x="10" y="10" width="136" height="86" rx="6" fill="#16222d"/>
+        <path d="M22 80 l28 -26 l20 16 l26 -30 l36 40" stroke="#2c4a57" stroke-width="3" fill="none"/>
+        <text x="12" y="120" fill="#e8f1f0" font-weight="600">worker4</text>
+        <text x="12" y="138" fill="#f2cc60">● dispos session</text>
+      </g>
+    </g>
+  </g>
+</svg>

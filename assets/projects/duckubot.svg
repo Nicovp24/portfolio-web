@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f1ea"/>
+      <stop offset="1" stop-color="#ebe6dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+
+  <!-- chat window -->
+  <g transform="translate(64,56)">
+    <rect width="740" height="688" rx="20" fill="#ffffff" stroke="#e1dbcf"/>
+    <rect width="740" height="72" rx="20" fill="#fbf9f5"/>
+    <rect y="71" width="740" height="1" fill="#e9e3d8"/>
+    <g transform="translate(28,18)">
+      <circle cx="18" cy="18" r="18" fill="#f7c948"/>
+      <circle cx="13" cy="15" r="2.6" fill="#1d2a35"/>
+      <path d="M17 21 q8 4 14 -1 q-6 7 -14 1z" fill="#e8892d"/>
+      <text x="48" y="16" fill="#1d2a35" font-size="17" font-weight="700">DuckuBot</text>
+      <text x="48" y="34" fill="#8a8274" font-size="13">Answers from the internal wiki · runs 100% local</text>
+    </g>
+
+    <g transform="translate(300,112)">
+      <rect width="412" height="76" rx="16" fill="#1d2a35"/>
+      <text x="22" y="32" fill="#ffffff" font-size="15">What is the latest procedure to request</text>
+      <text x="22" y="54" fill="#ffffff" font-size="15">QA for a purchase bot?</text>
+    </g>
+
+    <g transform="translate(28,220)">
+      <circle cx="18" cy="18" r="16" fill="#f7c948"/>
+      <circle cx="13" cy="15" r="2.4" fill="#1d2a35"/>
+      <rect x="48" y="0" width="560" height="236" rx="16" fill="#f6f3ec"/>
+      <g font-size="15" fill="#1d2a35">
+        <text x="70" y="34">The most recent guide (updated 3 days ago) says:</text>
+        <text x="70" y="70">1. Finish the branch and push it to the repo.</text>
+        <text x="70" y="98">2. Run the QA skill: it writes the "QA note" with</text>
+        <text x="90" y="122">branch, test booking and env variables.</text>
+        <text x="70" y="150">3. Move the ticket to ready_for_QA — Atrium</text>
+        <text x="90" y="174">picks it up automatically.</text>
+      </g>
+      <g transform="translate(70,192)" font-size="12">
+        <rect width="186" height="28" rx="14" fill="#ffffff" stroke="#e1dbcf"/>
+        <text x="14" y="18" fill="#6c6456">📄 QA workflow · Outline</text>
+        <rect x="196" width="170" height="28" rx="14" fill="#ffffff" stroke="#e1dbcf"/>
+        <text x="210" y="18" fill="#6c6456">📄 Atrium · Auto mode</text>
+      </g>
+    </g>
+    <g transform="translate(76,474)" font-size="13" fill="#8a8274">
+      <text>Was this helpful?</text>
+      <rect x="120" y="-17" width="36" height="26" rx="8" fill="#f6f3ec"/><text x="130" y="1">👍</text>
+      <rect x="164" y="-17" width="36" height="26" rx="8" fill="#f6f3ec"/><text x="174" y="1">👎</text>
+    </g>
+
+    <g transform="translate(28,604)">
+      <rect width="684" height="56" rx="16" fill="#fbf9f5" stroke="#e1dbcf"/>
+      <text x="22" y="34" fill="#a59d8e" font-size="15">Ask about the documentation…</text>
+      <rect x="626" y="8" width="48" height="40" rx="12" fill="#1d2a35"/>
+      <path d="M641 28 h18 M652 21 l7 7 l-7 7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- retrieval panel -->
+  <g transform="translate(836,56)">
+    <rect width="380" height="688" rx="20" fill="#1d2a35"/>
+    <text x="28" y="48" fill="#ffffff" font-size="18" font-weight="700">Retrieval</text>
+    <text x="28" y="72" fill="#9fb0bd" font-size="13">hybrid · BM25 + embeddings (RRF)</text>
+
+    <g font-size="13" transform="translate(28,104)">
+      <rect width="324" height="34" rx="10" fill="#26394a"/>
+      <text x="14" y="22" fill="#f7c948" font-weight="600">temporal query detected</text>
+      <text x="310" y="22" fill="#9fb0bd" text-anchor="end">top-30 → by date</text>
+    </g>
+
+    <g font-size="13" fill="#d7e1e8">
+      <g transform="translate(28,164)">
+        <text>QA workflow — updated 3d ago</text>
+        <rect y="12" width="324" height="8" rx="4" fill="#26394a"/><rect y="12" width="298" height="8" rx="4" fill="#4db6ac"/>
+      </g>
+      <g transform="translate(28,214)">
+        <text>Atrium — auto mode</text>
+        <rect y="12" width="324" height="8" rx="4" fill="#26394a"/><rect y="12" width="262" height="8" rx="4" fill="#4db6ac"/>
+      </g>
+      <g transform="translate(28,264)">
+        <text>Writing a QA note</text>
+        <rect y="12" width="324" height="8" rx="4" fill="#26394a"/><rect y="12" width="221" height="8" rx="4" fill="#4db6ac" opacity=".8"/>
+      </g>
+      <g transform="translate(28,314)">
+        <text>Mantis states</text>
+        <rect y="12" width="324" height="8" rx="4" fill="#26394a"/><rect y="12" width="160" height="8" rx="4" fill="#4db6ac" opacity=".6"/>
+      </g>
+      <g transform="translate(28,364)">
+        <text>Release checklist (2025)</text>
+        <rect y="12" width="324" height="8" rx="4" fill="#26394a"/><rect y="12" width="104" height="8" rx="4" fill="#4db6ac" opacity=".4"/>
+      </g>
+    </g>
+
+    <rect x="28" y="420" width="324" height="1" fill="#33485a"/>
+    <g transform="translate(28,456)" font-size="13">
+      <text fill="#9fb0bd">model</text><text x="324" fill="#ffffff" text-anchor="end">Ollama · qwen2.5</text>
+      <text y="34" fill="#9fb0bd">embeddings</text><text x="324" y="34" fill="#ffffff" text-anchor="end">FastEmbed</text>
+      <text y="68" fill="#9fb0bd">vector store</text><text x="324" y="68" fill="#ffffff" text-anchor="end">own, on disk</text>
+      <text y="102" fill="#9fb0bd">source</text><text x="324" y="102" fill="#ffffff" text-anchor="end">Outline API sync</text>
+    </g>
+    <g transform="translate(28,600)">
+      <rect width="324" height="56" rx="14" fill="#123a35" stroke="#2c7f75"/>
+      <text x="162" y="34" fill="#9ff0e5" font-size="15" font-weight="700" text-anchor="middle">0 bytes leave the machine</text>
+    </g>
+  </g>
+</svg>
